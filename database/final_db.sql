@@ -987,3 +987,9 @@ FROM results
 JOIN students
 
 ON results.student_id = students.id;
+
+
+use stmg;
+
+
+show tables;

@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import {
   FaTachometerAlt,
@@ -6,24 +6,14 @@ import {
   FaBook,
   FaClipboardCheck,
   FaChartBar,
-  FaSignOutAlt,
 } from "react-icons/fa";
 
 import "../styles/sidebar.css";
 
 function StudentSidebar() {
-  const navigate = useNavigate();
-
-  const logout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-
-    navigate("/");
-  };
-
   return (
     <div className="sidebar">
-      <h2 className="logo">SMS</h2>
+      <h2 className="logo">Student Panel</h2>
 
       <ul>
         <li>
@@ -61,11 +51,6 @@ function StudentSidebar() {
           </NavLink>
         </li>
       </ul>
-
-      <button className="logout-btn" onClick={logout}>
-        <FaSignOutAlt />
-        <span>Logout</span>
-      </button>
     </div>
   );
 }

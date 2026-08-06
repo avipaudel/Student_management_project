@@ -56,39 +56,81 @@ function Login() {
     }
   };
 
+  // return (
+  //   <div className="login-container">
+  //     <form className="login-box" onSubmit={handleSubmit}>
+  //       <h1>Student Management System</h1>
+
+  //       <input
+  //         type="email"
+
+  //         name="email"
+
+  //         placeholder="Email"
+
+  //         value={loginData.email}
+
+  //         onChange={handleChange}
+  //       />
+
+  //       <input
+  //         type="password"
+
+  //         name="password"
+
+  //         placeholder="Password"
+
+  //         value={loginData.password}
+
+  //         onChange={handleChange}
+  //       />
+
+  //       <button type="submit" disabled={loading}>
+  //         {loading ? "Logging in..." : "Login"}
+  //       </button>
+  //     </form>
+  //   </div>
+  // );
   return (
-    <div className="login-container">
-      <form className="login-box" onSubmit={handleSubmit}>
-        <h1>Student Management System</h1>
+    <div className="login-page">
+      <div className="login-container">
+        <div className="login-left">
+          <h1>Student Management System</h1>
 
-        <input
-          type="email"
+          <p>
+            Manage students, teachers, courses, attendance, and results through
+            one centralized platform.
+          </p>
+        </div>
 
-          name="email"
+        <div className="login-right">
+          <form className="login-box" onSubmit={handleSubmit}>
+            <h2>Welcome Back</h2>
 
-          placeholder="Email"
+            <p className="login-subtitle">Sign in to continue</p>
 
-          value={loginData.email}
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={loginData.email}
+              onChange={handleChange}
+            />
 
-          onChange={handleChange}
-        />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={loginData.password}
+              onChange={handleChange}
+            />
 
-        <input
-          type="password"
-
-          name="password"
-
-          placeholder="Password"
-
-          value={loginData.password}
-
-          onChange={handleChange}
-        />
-
-        <button type="submit" disabled={loading}>
-          {loading ? "Logging in..." : "Login"}
-        </button>
-      </form>
+            <button className="login-btn" type="submit" disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
